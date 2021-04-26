@@ -1,4 +1,4 @@
-package com.pk.engineering.excellence.consumer.ConsumerService;
+package com.pk.consumer.ConsumerService;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.pk.engineering.excellence.consumer.constants;
+package com.pk.consumer.constants;
 
 public class AppConstants {
 private AppConstants() {}

@@ -1,11 +1,10 @@
-package com.pk.engineering.excellence.consumer.service;
+package com.pk.consumer.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
-
-import com.pk.engineering.excellence.consumer.constants.AppConstants;
+import com.pk.consumer.constants.AppConstants;
  
 @Service
 public class ConsumerService 
