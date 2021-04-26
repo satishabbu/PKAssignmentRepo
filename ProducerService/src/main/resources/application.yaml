@@ -3,6 +3,15 @@ server:
 spring:
   kafka:
     producer:
-      bootstrap-servers: localhost:9092
-      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      bootstrap-servers: omnibus-01.srvs.cloudkafka.com:9094,omnibus-02.srvs.cloudkafka.com:9094,omnibus-03.srvs.cloudkafka.com:9094
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      properties:
+#        security:
+#           protocol: SASL_SSL
+        sasl:
+          mechanism: SCRAM-SHA-256
+        jaas:
+          config: org.apache.kafka.common.security.scram.ScramLoginModule required username="oo6eeuc2" password="mob12Cn5pNnyP54cshOTm63gq31bD6ie";
+cloudkarafka:
+  topic: oo6eeuc2-default

@@ -1,4 +1,4 @@
-package com.pk.engineering.excellence.producer.constants;
+package com.pk.producer.constants;
 
 public class AppConstants {
 

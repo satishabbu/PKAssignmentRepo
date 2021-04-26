@@ -1,4 +1,4 @@
-package com.pk.engineering.excellence.customer.ProducerService;
+package com.pk.producer.ProducerService;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

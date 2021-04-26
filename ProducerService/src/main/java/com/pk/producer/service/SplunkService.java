@@ -1,6 +1,6 @@
-package com.pk.engineering.excellence.producer.service;
+package com.pk.producer.service;
 
-import com.pk.engineering.excellence.producer.constants.AppConstants;
+import com.pk.producer.constants.AppConstants;
 import com.splunk.Service;
 import com.splunk.ServiceArgs;
 

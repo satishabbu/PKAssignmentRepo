@@ -1,12 +1,12 @@
-package com.pk.engineering.excellence.producer.service;
+package com.pk.producer.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
-import com.pk.engineering.excellence.producer.constants.AppConstants;
-import com.pk.engineering.excellence.producer.model.Customer;
+import com.pk.producer.constants.AppConstants;
+import com.pk.producer.model.Customer;
 
 @Service
 public class ProducerService {

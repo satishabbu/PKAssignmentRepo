@@ -1,39 +1,39 @@
-package com.pk.engineering.excellence.producer.model;
+package com.pk.producer.model;
 
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
+// import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 // import com.fasterxml.jackson.annotation.JsonCreator;
 // import io.swagger.annotations.ApiModel;
 // import io.swagger.annotations.ApiModelProperty;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.constraints.*;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ErrorResponse
+ * Response
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2021-04-23T09:59:16.810Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen",
+    date = "2021-04-23T09:59:16.810Z")
 
 
-public class ErrorResponse   {
+public class Response {
   @JsonProperty("status")
-  private String status = "failed";
+  private String status = "success";
 
   @JsonProperty("message")
   private String message = null;
 
-  @JsonProperty("errorType")
-  private String errorType = null;
-
-  public ErrorResponse status(String status) {
+  public Response status(String status) {
     this.status = status;
     return this;
   }
 
   /**
    * Get status
+   * 
    * @return status
-  **/
+   **/
   // @ApiModelProperty(required = true, value = "")
   @NotNull
 
@@ -46,15 +46,16 @@ public class ErrorResponse   {
     this.status = status;
   }
 
-  public ErrorResponse message(String message) {
+  public Response message(String message) {
     this.message = message;
     return this;
   }
 
   /**
    * Get message
+   * 
    * @return message
-  **/
+   **/
   // @ApiModelProperty(required = true, value = "")
   @NotNull
 
@@ -67,26 +68,6 @@ public class ErrorResponse   {
     this.message = message;
   }
 
-  public ErrorResponse errorType(String errorType) {
-    this.errorType = errorType;
-    return this;
-  }
-
-  /**
-   * Get errorType
-   * @return errorType
-  **/
-  // @ApiModelProperty(value = "")
-
-
-  public String getErrorType() {
-    return errorType;
-  }
-
-  public void setErrorType(String errorType) {
-    this.errorType = errorType;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -96,32 +77,29 @@ public class ErrorResponse   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ErrorResponse errorResponse = (ErrorResponse) o;
-    return Objects.equals(this.status, errorResponse.status) &&
-        Objects.equals(this.message, errorResponse.message) &&
-        Objects.equals(this.errorType, errorResponse.errorType);
+    Response response = (Response) o;
+    return Objects.equals(this.status, response.status)
+        && Objects.equals(this.message, response.message);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(status, message, errorType);
+    return Objects.hash(status, message);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ErrorResponse {\n");
-    
+    sb.append("class Response {\n");
+
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
-    sb.append("    errorType: ").append(toIndentedString(errorType)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

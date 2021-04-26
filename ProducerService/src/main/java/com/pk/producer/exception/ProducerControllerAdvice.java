@@ -1,11 +1,11 @@
-package com.pk.engineering.excellence.producer.exception;
+package com.pk.producer.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
-import com.pk.engineering.excellence.producer.model.ErrorResponse;
+import com.pk.producer.model.ErrorResponse;
 
 @RestControllerAdvice
 public class ProducerControllerAdvice {

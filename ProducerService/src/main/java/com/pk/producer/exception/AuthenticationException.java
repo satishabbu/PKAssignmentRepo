@@ -1,4 +1,4 @@
-package com.pk.engineering.excellence.producer.exception;
+package com.pk.producer.exception;
 
 public class AuthenticationException extends RuntimeException {
 

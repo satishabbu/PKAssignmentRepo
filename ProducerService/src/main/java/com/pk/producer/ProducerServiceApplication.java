@@ -1,4 +1,4 @@
-package com.pk.engineering.excellence.producer;
+package com.pk.producer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
