@@ -5,7 +5,7 @@ public class AppConstants {
   private AppConstants() {}
 
   /** Kafka constants */
-  public static final String TOPIC_NAME = "kafkaTopic";
+  public static final String TOPIC_NAME = "oo6eeuc2-default";
   public static final String GROUP_ID = "pkglobal";
 
   /** Splunk constants */
