@@ -1,6 +1,10 @@
 package com.pk.producer.constants;
 
-public class AppConstants {
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public final class AppConstants {
 
   private AppConstants() {}
 
@@ -13,4 +17,7 @@ public class AppConstants {
   public static final String SPLUNK_PORT = "8089";
   public static final String SCHEME = "https";
 
+  /** Masking config */
+  public static final List<String> MASKED_FIELDS =
+      Collections.unmodifiableList(Arrays.asList("customerNumber", "birthdate", "email"));
 }

@@ -1,5 +1,8 @@
+# Server config
 server:
   port: 9000
+
+# Kafka config
 spring:
   kafka:
     producer:
@@ -16,9 +19,19 @@ spring:
 cloudkarafka:
   topic: oo6eeuc2-default
 
-# logging conf
+# Logging config
 logging:
   level:
     root: "info"
     org.springframework.web: "debug"
     org.hibernate: "error"
+
+# Security config
+security:
+  signing-key: YmZlYTc4M2RzZmdjOWI5ZHNmZDo4YTkwMzBmYmNhODlhNWIyYzI4ZTkyZjEzNDUwYmI3NzgyNGI1YWQx
+  jwt:
+    client-id: bfea783dsfgc9b9dsfd
+    client-secret: 8a9030fbca89a5b2c28e92f13450bb77824b5ad1
+    grant-type: authorization_code # consider password?
+    resource-ids: 2ed0eg9e-8338-4ed7-b101-38ae561e6ct6
+ 

@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class Customer {
   @JsonProperty("customerNumber")
+  @NotNull
   private String customerNumber = null;
 
   @JsonProperty("firstName")
