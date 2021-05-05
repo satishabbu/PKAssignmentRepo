@@ -1,13 +1,12 @@
 package com.pk.producer.model;
 
 import java.util.Objects;
-// import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-// import com.fasterxml.jackson.annotation.JsonCreator;
 // import io.swagger.annotations.ApiModel;
 // import io.swagger.annotations.ApiModelProperty;
 import org.springframework.validation.annotation.Validated;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModelProperty;
 
 /**
  * Response
@@ -29,15 +28,8 @@ public class Response {
     return this;
   }
 
-  /**
-   * Get status
-   * 
-   * @return status
-   **/
-  // @ApiModelProperty(required = true, value = "")
-  @NotNull
-
-
+  @ApiModelProperty(required = true, value = "status is required")
+  @NotNull(message = "status is required")
   public String getStatus() {
     return status;
   }
@@ -51,15 +43,8 @@ public class Response {
     return this;
   }
 
-  /**
-   * Get message
-   * 
-   * @return message
-   **/
-  // @ApiModelProperty(required = true, value = "")
-  @NotNull
-
-
+  @ApiModelProperty(required = true, value = "message is required")
+  @NotNull(message = "message is required")
   public String getMessage() {
     return message;
   }
@@ -67,7 +52,6 @@ public class Response {
   public void setMessage(String message) {
     this.message = message;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -108,4 +92,3 @@ public class Response {
     return o.toString().replace("\n", "\n    ");
   }
 }
-

@@ -1,21 +1,20 @@
 package com.pk.producer.model;
 
 import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-// import com.fasterxml.jackson.annotation.JsonCreator;
-// import io.swagger.annotations.ApiModel;
-// import io.swagger.annotations.ApiModelProperty;
+import javax.validation.constraints.NotNull;
 import org.springframework.validation.annotation.Validated;
-import javax.validation.constraints.*;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModelProperty;
 
 /**
  * ErrorResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2021-04-23T09:59:16.810Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen",
+    date = "2021-04-23T09:59:16.810Z")
 
 
-public class ErrorResponse   {
+public class ErrorResponse {
   @JsonProperty("status")
   private String status = "failed";
 
@@ -30,14 +29,8 @@ public class ErrorResponse   {
     return this;
   }
 
-  /**
-   * Get status
-   * @return status
-  **/
-  // @ApiModelProperty(required = true, value = "")
-  @NotNull
-
-
+  @ApiModelProperty(required = true, value = "status is required")
+  @NotNull(message = "status is required")
   public String getStatus() {
     return status;
   }
@@ -51,14 +44,8 @@ public class ErrorResponse   {
     return this;
   }
 
-  /**
-   * Get message
-   * @return message
-  **/
-  // @ApiModelProperty(required = true, value = "")
-  @NotNull
-
-
+  @ApiModelProperty(required = true, value = "message is required")
+  @NotNull(message = "message is required")
   public String getMessage() {
     return message;
   }
@@ -72,13 +59,7 @@ public class ErrorResponse   {
     return this;
   }
 
-  /**
-   * Get errorType
-   * @return errorType
-  **/
-  // @ApiModelProperty(value = "")
-
-
+  @ApiModelProperty("type of exception")
   public String getErrorType() {
     return errorType;
   }
@@ -86,7 +67,6 @@ public class ErrorResponse   {
   public void setErrorType(String errorType) {
     this.errorType = errorType;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -97,9 +77,9 @@ public class ErrorResponse   {
       return false;
     }
     ErrorResponse errorResponse = (ErrorResponse) o;
-    return Objects.equals(this.status, errorResponse.status) &&
-        Objects.equals(this.message, errorResponse.message) &&
-        Objects.equals(this.errorType, errorResponse.errorType);
+    return Objects.equals(this.status, errorResponse.status)
+        && Objects.equals(this.message, errorResponse.message)
+        && Objects.equals(this.errorType, errorResponse.errorType);
   }
 
   @Override
@@ -111,7 +91,7 @@ public class ErrorResponse   {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ErrorResponse {\n");
-    
+
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("    errorType: ").append(toIndentedString(errorType)).append("\n");
@@ -120,8 +100,7 @@ public class ErrorResponse   {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
