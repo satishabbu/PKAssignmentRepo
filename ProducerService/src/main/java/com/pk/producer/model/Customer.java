@@ -5,21 +5,16 @@ import java.util.Objects;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-// import io.swagger.annotations.ApiModel;
-// import io.swagger.annotations.ApiModelProperty;
 // import org.threeten.bp.OffsetDateTime;
 import org.springframework.validation.annotation.Validated;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModelProperty;
 
-/**
- * Customer
- */
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen",
     date = "2021-04-23T09:59:16.810Z")
-
 
 public class Customer {
   @JsonProperty("customerNumber")
@@ -93,14 +88,9 @@ public class Customer {
     return this;
   }
 
-  /**
-   * Get customerNumber
-   * 
-   * @return customerNumber
-   **/
-  // @ApiModelProperty(required = true, value = "")
-  @NotNull
-  @Size(max = 10)
+  @ApiModelProperty(required = true, value = "customer number is required")
+  @NotNull(message = "customer number is required")
+  @Size(max = 10, message = "maximum 10 characters can be entered")
   public String getCustomerNumber() {
     return customerNumber;
   }
@@ -114,14 +104,9 @@ public class Customer {
     return this;
   }
 
-  /**
-   * Get firstName
-   * 
-   * @return firstName
-   **/
-  // @ApiModelProperty(required = true, value = "")
-  @NotNull
-  @Size(min = 10, max = 50)
+  @ApiModelProperty(required = true, value = "first name is required")
+  @NotNull(message = "first name is required")
+  @Size(min = 10, max = 50, message = "min 10 / max 50 characters required")
   public String getFirstName() {
     return firstName;
   }
@@ -135,14 +120,9 @@ public class Customer {
     return this;
   }
 
-  /**
-   * Get lastName
-   * 
-   * @return lastName
-   **/
-  // @ApiModelProperty(required = true, value = "")
-  @NotNull
-  @Size(min = 10, max = 50)
+  @ApiModelProperty(required = true, value = "last name is required")
+  @NotNull(message = "last name is required")
+  @Size(min = 10, max = 50, message = "min 10 / max 50 characters required")
   public String getLastName() {
     return lastName;
   }
@@ -156,13 +136,7 @@ public class Customer {
     return this;
   }
 
-  /**
-   * Get birthDate
-   * 
-   * @return birthDate
-   **/
-  // @ApiModelProperty(value = "")
-
+  @ApiModelProperty(required = true, value = "birth date is required")
   @Valid
   public OffsetDateTime getBirthDate() {
     return birthDate;
@@ -177,13 +151,8 @@ public class Customer {
     return this;
   }
 
-  /**
-   * Get country
-   * 
-   * @return country
-   **/
-  // @ApiModelProperty(example = "India", required = true, value = "")
-  @NotNull
+  @ApiModelProperty(example = "India", required = true, value = "country is required")
+  @NotNull(message = "country is required")
   public String getCountry() {
     return country;
   }
@@ -197,14 +166,9 @@ public class Customer {
     return this;
   }
 
-  /**
-   * Get countryCode
-   * 
-   * @return countryCode
-   **/
-  // @ApiModelProperty(example = "IN", required = true, value = "")
-  @NotNull
-  @Size(max = 2)
+  @ApiModelProperty(example = "IN", required = true, value = "country code is required")
+  @NotNull(message = "country code is required")
+  @Size(max = 2, message = "max 2 chars can be entered")
   public String getCountryCode() {
     return countryCode;
   }
@@ -218,14 +182,9 @@ public class Customer {
     return this;
   }
 
-  /**
-   * Get mobileNumber
-   * 
-   * @return mobileNumber
-   **/
-  // @ApiModelProperty(example = "5555551216", required = true, value = "")
-  @NotNull
-  @Size(max = 10)
+  @ApiModelProperty(example = "5555551216", required = true, value = "mobile number is required")
+  @NotNull(message = "mobile number is required")
+  @Size(max = 10, message = "max 10 chars can be entered")
   public String getMobileNumber() {
     return mobileNumber;
   }
@@ -239,14 +198,9 @@ public class Customer {
     return this;
   }
 
-  /**
-   * Get email
-   * 
-   * @return email
-   **/
-  // @ApiModelProperty(example = "abc@gmail.com", required = true, value = "")
-  @NotNull
-  @Size(max = 50)
+  @ApiModelProperty(example = "abc@gmail.com", required = true, value = "email is required")
+  @NotNull(message = "email is required")
+  @Size(max = 50, message = "max 50 chars can be entered")
   public String getEmail() {
     return email;
   }
@@ -260,13 +214,8 @@ public class Customer {
     return this;
   }
 
-  /**
-   * Get customerStatus
-   * 
-   * @return customerStatus
-   **/
-  // @ApiModelProperty(required = true, value = "")
-  @NotNull
+  @ApiModelProperty(required = true, value = "customer status is required")
+  @NotNull(message = "customer status is required")
   public CustomerStatusEnum getCustomerStatus() {
     return customerStatus;
   }
@@ -280,13 +229,8 @@ public class Customer {
     return this;
   }
 
-  /**
-   * Get address
-   * 
-   * @return address
-   **/
-  // @ApiModelProperty(required = true, value = "")
-  @NotNull
+  @ApiModelProperty(required = true, value = "address is required")
+  @NotNull(message = "address is required")
   public Object getAddress() {
     return address;
   }
