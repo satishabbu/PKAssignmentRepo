@@ -1,11 +1,10 @@
 package com.pk.producer.model;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDate;
 import java.util.Objects;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-// import org.threeten.bp.OffsetDateTime;
 import org.springframework.validation.annotation.Validated;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -28,7 +27,7 @@ public class Customer {
   private String lastName = null;
 
   @JsonProperty("birthDate")
-  private OffsetDateTime birthDate = null;
+  private LocalDate birthDate = null;
 
   @JsonProperty("country")
   private String country = null;
@@ -81,7 +80,7 @@ public class Customer {
   private CustomerStatusEnum customerStatus = null;
 
   @JsonProperty("address")
-  private Object address = null;
+  private Address address = null;
 
   public Customer customerNumber(String customerNumber) {
     this.customerNumber = customerNumber;
@@ -131,18 +130,18 @@ public class Customer {
     this.lastName = lastName;
   }
 
-  public Customer birthDate(OffsetDateTime birthDate) {
+  public Customer birthDate(LocalDate birthDate) {
     this.birthDate = birthDate;
     return this;
   }
 
   @ApiModelProperty(required = true, value = "birth date is required")
   @Valid
-  public OffsetDateTime getBirthDate() {
+  public LocalDate getBirthDate() {
     return birthDate;
   }
 
-  public void setBirthDate(OffsetDateTime birthDate) {
+  public void setBirthDate(LocalDate birthDate) {
     this.birthDate = birthDate;
   }
 
@@ -224,7 +223,7 @@ public class Customer {
     this.customerStatus = customerStatus;
   }
 
-  public Customer address(Object address) {
+  public Customer address(Address address) {
     this.address = address;
     return this;
   }
@@ -235,7 +234,7 @@ public class Customer {
     return address;
   }
 
-  public void setAddress(Object address) {
+  public void setAddress(Address address) {
     this.address = address;
   }
 
@@ -295,4 +294,3 @@ public class Customer {
     return o.toString().replace("\n", "\n    ");
   }
 }
-

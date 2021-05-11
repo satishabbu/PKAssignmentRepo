@@ -8,13 +8,9 @@ import org.springframework.validation.annotation.Validated;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModelProperty;
 
-/**
- * Response
- */
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen",
     date = "2021-04-23T09:59:16.810Z")
-
 
 public class Response {
   @JsonProperty("status")
