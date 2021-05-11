@@ -20,4 +20,7 @@ public final class AppConstants {
   /** Masking config */
   public static final List<String> MASKED_FIELDS =
       Collections.unmodifiableList(Arrays.asList("customerNumber", "birthdate", "email"));
+  public static final String FIRST_FOUR_CHARS_MASK = "^.{1,4}";
+  public static final String CUSTOMER_NUMBER_MASK = "\\d(?=(?:\\D*\\d){0,3}\\D*$)";
+
 }

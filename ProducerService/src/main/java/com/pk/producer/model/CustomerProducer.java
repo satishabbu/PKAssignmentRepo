@@ -1,13 +1,11 @@
 package com.pk.producer.model;
 
-import java.time.LocalDate;
-
 public class CustomerProducer {
 
   private String customerNumber;
   private String firstName;
   private String lastName;
-  private LocalDate birthDate;
+  private String birthDate;
   private String country;
   private String countryCode;
   private String mobileNumber;
@@ -39,11 +37,11 @@ public class CustomerProducer {
     this.lastName = lastName;
   }
 
-  public LocalDate getBirthDate() {
+  public String getBirthDate() {
     return birthDate;
   }
 
-  public void setBirthDate(LocalDate birthDate) {
+  public void setBirthDate(String birthDate) {
     this.birthDate = birthDate;
   }
 
